@@ -1,5 +1,5 @@
 {% set name = "rpthermo" %}
-{% set version = "6.8.1" %}
+{% set version = "6.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/brsynth/rpThermo/archive/refs/tags/{{ version }}.tar.gz
-  sha256: c1f2bde24e549fa0d79c4e30f8067bac3d090861745f9ecd566e13e2f769b022
+  sha256: 37230b72b5ee72c073ebd2fbd1fd8d6f2cd6d84351b0652890aa5d74005cbb14
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} setup.py install
 
 requirements:
   host:
@@ -24,9 +24,9 @@ requirements:
     - numpy
     - scipy
     - equilibrator-api
-    - brs_utils
+    - brs_utils >=1.26.0
     - chemlite
-    - rplibs
+    - rplibs >=6.9.3
 
 test:
   requires:
