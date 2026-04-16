@@ -1,5 +1,5 @@
 {% set name = "rpthermo" %}
-{% set version = "6.8.3" %}
+{% set version = "6.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/brsynth/rpThermo/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 60ef37e39784a98356e5f9f644ed69040dc595d748d43ee973a3d38a3568efa5
+  sha256: d4b88e6cbde44002f3c212b13fd0c4487f186a4a5ff3792f1e026af9f6ebb08f
 
 build:
   number: 0
